@@ -10,11 +10,8 @@
 	$curl = curl_init($url);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-
 	curl_setopt($curl, CURLOPT_HEADER, FALSE);
-
 	curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.':'.$consumerSecret);
-
 	$result = curl_exec($curl);
 	$status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	$result = json_decode($result);
