@@ -1,7 +1,7 @@
 <?php 
 
-	$consumerKey = ''; //Replace with your app Consumer Key
-	$consumerSecret = ''; // Replace with your app Secret
+	$consumerKey = ''; //Fill with your app Consumer Key
+	$consumerSecret = ''; // Fill with your app Secret
 
 	$headers = ['Content-Type:application/json; charset=utf8'];
 
