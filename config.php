@@ -17,6 +17,7 @@ function insert_response($jsonMpesaResponse){
 	* 1.2 Ensure you have updated your access token to simulate the transaction
 	* 1.4 Simulate the transaction
 	*
+	* Kindly, note the changes on our simulate.php, otherwise this will not work as expected.
 	**/
 
 	# 1.1. Config Section
