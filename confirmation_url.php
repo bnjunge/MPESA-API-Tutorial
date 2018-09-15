@@ -13,7 +13,6 @@
     // log the response
     $logFile = "M_PESAConfirmationResponse.txt";
 
-
     $jsonMpesaResponse = json_decode($mpesaResponse, true); // We will then use this to save to database
 
     $transaction = array(
@@ -35,7 +34,6 @@
 
     // write to file
     $log = fopen($logFile, "a");
-
     fwrite($log, $mpesaResponse);
     fclose($log);
 
