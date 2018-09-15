@@ -1,45 +1,34 @@
 <?php
-    require 'config.php';
-    header("Content-Type: application/json");
+    $url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate';
+    
+    $access_token = ''; // check file mpesa_accesstoken.php.
+    
+    $ShortCode  = ''; // Shortcode. Same as the one on register_url.php
+    $amount     = ''; // amount the client/we are paying to the paybill
+    $msisdn     = ''; // phone number paying 
+    $billRef    = ''; // This is anything that helps identify the specific transaction. Can be a clients ID, Account Number, Invoice amount, cart no.. etc
 
-    $response = '{
-        "ResultCode": 0, 
-        "ResultDesc": "Confirmation Received Successfully"
-    }';
-
-    // Response from M-PESA Stream
-    $mpesaResponse = file_get_contents('php://input');
-
-    // log the response
-    $logFile = "M_PESAConfirmationResponse.txt";
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization:Bearer '.$access_token));
 
 
-    $jsonMpesaResponse = json_decode($mpesaResponse, true); // We will then use this to save to database
-
-    $transaction = array(
-            ':TransactionType'      => $jsonMpesaResponse['TransactionType'],
-            ':TransID'              => $jsonMpesaResponse['TransID'],
-            ':TransTime'            => $jsonMpesaResponse['TransTime'],
-            ':TransAmount'          => $jsonMpesaResponse['TransAmount'],
-            ':BusinessShortCode'    => $jsonMpesaResponse['BusinessShortCode'],
-            ':BillRefNumber'        => $jsonMpesaResponse['BillRefNumber'],
-            ':InvoiceNumber'        => $jsonMpesaResponse['InvoiceNumber'],
-            ':OrgAccountBalance'    => $jsonMpesaResponse['OrgAccountBalance'],
-            ':ThirdPartyTransID'    => $jsonMpesaResponse['ThirdPartyTransID'],
-            ':MSISDN'               => $jsonMpesaResponse['MSISDN'],
-            ':FirstName'            => $jsonMpesaResponse['FirstName'],
-            ':MiddleName'           => $jsonMpesaResponse['MiddleName'],
-            ':LastName'             => $jsonMpesaResponse['LastName']
+    $curl_post_data = array(
+           'ShortCode' => $ShortCode,
+           'CommandID' => 'CustomerPayBillOnline',
+           'Amount' => $amount,
+           'Msisdn' => $msisdn,
+           'BillRefNumber' => $billRef
     );
 
+    $data_string = json_encode($curl_post_data);
 
-    // write to file
-    $log = fopen($logFile, "a");
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
 
-    fwrite($log, $mpesaResponse);
-    fclose($log);
+    $curl_response = curl_exec($curl);
+    print_r($curl_response);
 
-    echo $response;
-
-    insert_response($transaction);
+    echo $curl_response;
 ?>
