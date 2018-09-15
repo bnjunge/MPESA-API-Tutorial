@@ -1,6 +1,6 @@
 <?php
 
-    # if this is your first time, you might need to check the 'Tutorial 1'  File first.
+    # if this is your first time, you might need to check the directory 'Tutorial 1'  File first.
     require 'config.php';
     header("Content-Type: application/json");
 
