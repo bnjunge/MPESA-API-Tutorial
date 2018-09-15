@@ -31,7 +31,6 @@
             ':LastName'             => $jsonMpesaResponse['LastName']
     );
 
-
     // write to file
     $log = fopen($logFile, "a");
     fwrite($log, $mpesaResponse);
