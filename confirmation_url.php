@@ -1,4 +1,5 @@
 <?php
+    require 'config.php';
     header("Content-Type: application/json");
 
     $response = '{
@@ -15,6 +16,23 @@
 
     $jsonMpesaResponse = json_decode($mpesaResponse, true); // We will then use this to save to database
 
+    $transaction = array(
+            ':TransactionType'      => $jsonMpesaResponse['TransactionType'],
+            ':TransID'              => $jsonMpesaResponse['TransID'],
+            ':TransTime'            => $jsonMpesaResponse['TransTime'],
+            ':TransAmount'          => $jsonMpesaResponse['TransAmount'],
+            ':BusinessShortCode'    => $jsonMpesaResponse['BusinessShortCode'],
+            ':BillRefNumber'        => $jsonMpesaResponse['BillRefNumber'],
+            ':InvoiceNumber'        => $jsonMpesaResponse['InvoiceNumber'],
+            ':OrgAccountBalance'    => $jsonMpesaResponse['OrgAccountBalance'],
+            ':ThirdPartyTransID'    => $jsonMpesaResponse['ThirdPartyTransID'],
+            ':MSISDN'               => $jsonMpesaResponse['MSISDN'],
+            ':FirstName'            => $jsonMpesaResponse['FirstName'],
+            ':MiddleName'           => $jsonMpesaResponse['MiddleName'],
+            ':LastName'             => $jsonMpesaResponse['LastName']
+    );
+
+
     // write to file
     $log = fopen($logFile, "a");
 
@@ -22,4 +40,6 @@
     fclose($log);
 
     echo $response;
+
+    insert_response($transaction);
 ?>
