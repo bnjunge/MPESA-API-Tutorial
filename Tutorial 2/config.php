@@ -28,7 +28,7 @@ function insert_response($jsonMpesaResponse){
 
 	# 1.1.1 establish a connection
 	try{
-		$con = new PDO("mysql:dbhost=$dbhost;dbname=$dbName", $dbUser, $dbPass);
+		$con = new PDO("mysql:dbhost=$dbHost;dbname=$dbName", $dbUser, $dbPass);
 		echo "Connection was successful";
 	}
 	catch(PDOException $e){
