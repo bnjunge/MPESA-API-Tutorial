@@ -1,5 +1,6 @@
 <?php
 
+/* TESTED ON PHP Version 7.2.8. Refer to the version of your php if some/parts/whole has errors */
 /**
 * This function serves the purpose of saving the data into our database.
 * It has the connection it, so by just doing it right, you will be up and running without any struggles
