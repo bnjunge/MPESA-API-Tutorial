@@ -33,10 +33,7 @@
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
-  # header for stk push
-  $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
-
-  # M-PESA endpoint urls
+    # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
@@ -53,6 +50,9 @@
   $result = json_decode($result);
   $access_token = $result->access_token;  
   curl_close($curl);
+
+  # header for stk push
+  $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
 
   # initiating the transaction
   $curl = curl_init();
