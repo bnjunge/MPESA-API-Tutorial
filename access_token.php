@@ -21,3 +21,4 @@
 	echo $access_token;
 	
 	curl_close($curl);
+?>
