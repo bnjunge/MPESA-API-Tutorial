@@ -1,4 +1,5 @@
 <?php
+  date_default_timezone_set('Africa/Nairobi');
 
   # access token
   $consumerKey = ''; //Fill with your app Consumer Key
@@ -25,7 +26,7 @@
   $Amount = '';
  
   # Get the timestamp, format YYYYmmddhms -> 20181004151020
-  $Timestamp = date('YmdGis');    
+  $Timestamp = date('YmdHis');    
   
   # Get the base64 encoded string -> $password. The passkey is the M-PESA Public Key
   $Password = base64_encode($BusinessShortCode.$Passkey.$Timestamp);
