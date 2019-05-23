@@ -16,7 +16,7 @@
   $CommandID = '';          # choose between SalaryPayment, BusinessPayment, PromotionPayment 
   $Amount = '';
   $PartyA = '';             # shortcode 1
-  $PartyB = '';             # Shortcode 2
+  $PartyB = '';             # Phone number you're sending money to
   $Remarks = 'Salary';      # Remarks ** can not be empty
   $QueueTimeOutURL = '';    # your QueueTimeOutURL
   $ResultURL = '';          # your ResultURL
