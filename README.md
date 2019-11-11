@@ -10,7 +10,7 @@ have. Contact us for more details.
 
 # Ready Made
  ## Go Premium?
-Daraja Premium Code(DPC) is a library we have that consumes Daraja API, and more of plug n' play. The code is available for purchase at <b>KES 10,000</b> and if you need to monitor your transactions live on an android device/iOS Mobile, we have the apps ready integrated with our DPC at an addition of <b>KES 5,000</b>
+Daraja Premium Code(DPC) is a library we have developed inhouse, that consumes Daraja API, and more of plug n' play. The code is available for purchase at <b>KES 10,000</b> and if you need to monitor your transactions live on an android device/iOS Mobile, we have the apps ready integrated with our DPC at an addition of <b>KES 5,000</b>
 - This code is suitable for:
   - non-coders
   - Those who don't want to re-invent the wheel
