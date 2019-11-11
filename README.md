@@ -28,3 +28,7 @@ Daraja Premium Code(DPC) is a library we have that consumes Daraja API, and more
 - Clean industry standard code
 - FREE Upgrades/Updates & Support
 - Monitor on Android/iOS
+
+Requests/Questions?
+Email: billing@survtechnologies.co.ke
+Messanger/Facebook Page fb.me/survtechKE/
