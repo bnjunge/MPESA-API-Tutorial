@@ -16,7 +16,7 @@ Daraja Premium Code(DPC) is a library we have developed inhouse, that consumes D
   - Those who don't want to re-invent the wheel
   
   ## SurvPay Woocommerce
-  We also have WordPress Plugin for KopoKopo and Daraja API that works on your WooCommerce Website. The code is priced at a one time fee of <b>KE 20,000</b>.
+  We also have WordPress Plugin for KopoKopo and Daraja API that works on your WooCommerce Website. The code is priced at a one time fee of <b>KE 5,000</b>.
   
   ## Support
   - We no longer support the FREE Versions of Daraja codes we provide. If you need any support with a non premium code, we recommend checking our YouTube channel under the comments sections as most of the questions have been addressed. 
