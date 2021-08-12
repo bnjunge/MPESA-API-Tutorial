@@ -40,5 +40,6 @@
 
     echo $response;
 
+    // this will insert to database.
     insert_response($transaction);
 ?>

@@ -22,6 +22,18 @@ Daraja Premium Code(DPC) is a library we have developed inhouse, that consumes D
   - We no longer support the FREE Versions of Daraja codes we provide. If you need any support with a non premium code, we recommend checking our YouTube channel under the comments sections as most of the questions have been addressed. 
   - For premium Code, our team is ready to assist any moment.
 
+## Outsource API Services using our MpaaS(Mpesa as a service platform)
+- Gives you all the flexibility
+- Expert Support
+- 100% Uptime and Secure
+- 3 minutes. Time it takes to integrate and start using your live shortcode, yeah, we timed it.
+- Free 100 Transactions every month
+- No contracts. 
+- Use your own branding and URL
+- Access to other services(Africas' Talking SMS platform, WhatsApp API, Airtime & KPLC APIs)
+
+Checkout more here https://dpc.survtechnologies.co.ke
+
 ## Why buy DPC?
 - No Coding Skills Required
 - Security inbuilt
