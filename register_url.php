@@ -18,7 +18,7 @@
 	$curl_post_data = array(
 	  //Fill in the request parameters with valid values
 	  'ShortCode' => $shortCode,
-	  'ResponseType' => 'Confirmed',
+	  'ResponseType' => 'Completed',
 	  'ConfirmationURL' => $confirmationUrl,
 	  'ValidationURL' => $validationUrl
 	);
